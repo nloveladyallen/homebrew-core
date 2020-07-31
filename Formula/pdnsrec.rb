@@ -4,6 +4,7 @@ class Pdnsrec < Formula
   url "https://downloads.powerdns.com/releases/pdns-recursor-4.3.3.tar.bz2"
   sha256 "0bbc481d10806233579712a1e4d5f5ee27ca9860e10aa6e1ec317f032bea1508"
   license "GPL-2.0"
+  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
