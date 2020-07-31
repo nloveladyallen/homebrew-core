@@ -4,6 +4,7 @@ class Pdns < Formula
   url "https://downloads.powerdns.com/releases/pdns-4.3.0.tar.bz2"
   sha256 "6be2e70f100df6f32cb431d5f57ca0aabde1fba6c11d947eccc86d44bdf95d08"
   license "GPL-2.0"
+  revision 1
 
   livecheck do
     url "https://downloads.powerdns.com/releases/"
