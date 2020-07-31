@@ -4,6 +4,7 @@ class Lmod < Formula
   url "https://github.com/TACC/Lmod/archive/8.4.5.tar.gz"
   sha256 "5441e2a5de1993580134f9ba6725f8cf279eb5f2e8594a826884f0f70f5b0ed5"
   license "MIT"
+  revision 1
 
   bottle do
     cellar :any_skip_relocation
