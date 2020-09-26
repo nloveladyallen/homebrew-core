@@ -35,17 +35,17 @@ class Luarocks < Formula
   end
 
   test do
-    ENV["LUA_PATH"] = "#{testpath}/share/lua/5.3/?.lua"
-    ENV["LUA_CPATH"] = "#{testpath}/lib/lua/5.3/?.so"
+    ENV["LUA_PATH"] = "#{testpath}/share/lua/5.4/?.lua"
+    ENV["LUA_CPATH"] = "#{testpath}/lib/lua/5.4/?.so"
 
-    (testpath/"lfs_53test.lua").write <<~EOS
+    (testpath/"lfs_54test.lua").write <<~EOS
       require("lfs")
       print(lfs.currentdir())
     EOS
 
     system "#{bin}/luarocks", "--tree=#{testpath}", "install", "luafilesystem"
     system "lua", "-e", "require('lfs')"
-    assert_match testpath.to_s, shell_output("lua lfs_53test.lua")
+    assert_match testpath.to_s, shell_output("lua lfs_54test.lua")
 
     ENV["LUA_PATH"] = "#{testpath}/share/lua/5.1/?.lua"
     ENV["LUA_CPATH"] = "#{testpath}/lib/lua/5.1/?.so"
